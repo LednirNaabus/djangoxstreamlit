@@ -8,3 +8,13 @@ class Record(models.Model):
 
     def __str__(self):
         return self.title
+
+class Employee(models.Model):
+    name = models.CharField(max_length=255)
+    position = models.CharField(max_length=255)
+    department = models.CharField(max_length=255)
+    branch = models.CharField(max_length=255)
+    employed_date = models.DateField()
+
+    def __str__(self):
+        return f"{self.name} - {self.position}"
